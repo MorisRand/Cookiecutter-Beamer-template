@@ -1,0 +1,85 @@
+{% raw %}
+\usepackage{tikz}
+
+\mode<presentation>
+
+\DeclareOptionBeamer{background}{\def\beamer@saarland@background{#1}}
+\ExecuteOptionsBeamer{background=} % Default value is empty
+\DeclareOptionBeamer{logo}{\def\beamer@saarland@logo{#1}}
+\ExecuteOptionsBeamer{logo=} % Default value is empty
+\DeclareOptionBeamer{secondlogo}{\def\beamer@saarland@secondlogo{#1}}
+\ExecuteOptionsBeamer{secondlogo=}
+\ProcessOptionsBeamer
+
+% footer has a uds logo and shows page number only
+\setbeamertemplate{footline}
+{%
+	\leavevmode%
+	\hbox{%
+		\if \beamer@saarland@secondlogo\@empty
+		\else
+                \makebox[0pt][l]{\includegraphics[height=1cm]{\beamer@saarland@secondlogo}}
+		\fi
+		\begin{beamercolorbox}[wd=0.98\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber}%
+			\insertframenumber{}\hspace*{-1ex}
+		\end{beamercolorbox}
+		\if \beamer@saarland@logo\@empty
+		\else
+                \makebox[0pt][r]{\includegraphics[height=1cm]{\beamer@saarland@logo}}
+		\fi
+	}%
+}
+
+% we insert the watermark background from the sidebar
+\setbeamertemplate{sidebar right}
+{
+	\if \beamer@saarland@background\@empty
+	\else
+		\vskip.1\beamer@leftmargin%
+		\vfill%
+		\llap{\includegraphics[width=.5\paperwidth,height=.5\paperheight]{\beamer@saarland@background}}
+	\fi
+}
+
+% customisation for the title page
+\setbeamertemplate{title page}
+{
+	\usebeamerfont{title}{\usebeamercolor[fg]{title}\inserttitle}\par
+	\usebeamerfont{subtitle}{\usebeamercolor[fg]{subtitle}\insertsubtitle}\par
+	\bigskip
+        \usebeamerfont{author}\insertauthor\par\vspace{10pt}
+        \usebeamerfont{institute}\insertinstitute\par\vspace{3pt}
+        \usebeamerfont{date}\insertdate\par
+
+        \vspace{3\bigskipamount}
+
+        \begin{columns}[b]
+            \begin{column}[b]{0.3\textwidth}
+                \begin{figure}[hb!]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{JINR_logo}
+                \end{figure}
+            \end{column}
+            \begin{column}[b]{0.7\textwidth}
+                \begin{figure}[hb!]
+                    \centering
+                \hspace*{-1.2cm}
+                    \includegraphics[width=0.35\textwidth]{logo_dyb}
+                \end{figure}
+            \end{column}
+            \begin{column}[b]{0.3\textwidth}
+                \begin{figure}[hb!]
+                \hspace*{-4cm}
+                    \includegraphics[width=0.5\textwidth]{DLNP_2_tr}
+                \end{figure}
+            \end{column}
+        \end{columns}
+
+}
+
+\setbeamercolor{math text}{fg=DeepBlue}
+
+
+\mode<all>
+\endinput
+{% endraw %}
