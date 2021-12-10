@@ -1,6 +1,6 @@
 \documentclass[talk.tex]{subfiles}
 \begin{document}
-    \begin{frame}{Two column layout example}
+    \begin{frame}{Two column layout example with different overprint styles}
 	\begin{columns}
 	    \begin{column}[T]{0.7\textwidth}
 		\includegraphics[scale=0.7]{neutron_cat.png}
@@ -16,6 +16,9 @@
 			\item Overprinted
 		    \end{itemize}
 		\end{overprint}
+		\begin{itemize}
+		    \item\alt<1>{first}{second}
+		\end{itemize}
 	    \end{column}
 	\end{columns}
     \end{frame}

@@ -1,0 +1,8 @@
+compile_pdf:
+  image: aergus/latex
+  script:
+    - cd \{\{cookiecutter.directory_name\}\}
+    - latexmk
+  artifacts:
+    paths:
+      - \{\{cookiecutter.directory_name\}\}/talk.pdf
