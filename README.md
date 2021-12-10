@@ -19,3 +19,6 @@ settings and git hooks
 cookiecutter https://git.jinr.ru/treskov/cookiecutter-beamer
 ```
 
+## Source of inspiration
+Based on Saarland theme
+https://github.com/kailashbuki/beamerthemesaarland
