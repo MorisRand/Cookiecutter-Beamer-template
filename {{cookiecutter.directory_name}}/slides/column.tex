@@ -1,0 +1,22 @@
+\documentclass[talk.tex]{subfiles}
+\begin{document}
+    \begin{frame}{Two column layout example}
+	\begin{columns}
+	    \begin{column}[T]{0.7\textwidth}
+		\includegraphics[scale=0.7]{neutron_cat.png}
+	    \end{column}
+	    \begin{column}[T]{0.3\textwidth}
+		\begin{overprint}
+		    \onslide<1>
+		    \begin{itemize}
+			\item Some text
+		    \end{itemize}
+		    \onslide<2>
+		    \begin{itemize}
+			\item Overprinted
+		    \end{itemize}
+		\end{overprint}
+	    \end{column}
+	\end{columns}
+    \end{frame}
+\end{document}

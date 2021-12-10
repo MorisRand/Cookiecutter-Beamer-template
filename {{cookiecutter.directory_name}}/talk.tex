@@ -1,24 +1,10 @@
 % the sample slide is created with 16:9 aspect ratio
-\documentclass[table,10pt,aspectratio=169, compress,xcolor={table,usenames,dvipsnames,x11names,svgnames},hyperref={unicode,hidelinks}]{beamer}
-\usetheme[logo=DLNP_2_tr,secondlogo=logo_dyb]{saarland}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{booktabs}
-% \usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{verbatim}
-\usepackage{subfiles}
-\usepackage{isotope}
-\usepackage{tensor}
-\usepackage{tikz}
-\usepackage{minted}
-\usepackage{multirow}
-\usepackage{siunitx}
-\usepackage{caption}
-\captionsetup{labelformat=empty,labelsep=none}
-\sisetup{math-micro=\text{µ},text-micro=µ}
+\documentclass[table,10pt,aspectratio=169,compress,xcolor={table,usenames,dvipsnames,x11names,svgnames},hyperref={unicode,hidelinks}]{beamer}
+\usetheme[logo=logos/DLNP_2_tr,secondlogo=logos/logo_dyb]{saarland}
+\input{preamble/packages.tex}
+\input{preamble/tikz_style.tex}
+\input{preamble/colors.tex}
+\input{preamble/commands.tex}
 
 
 % remove the options if you do not want to have them
@@ -28,77 +14,6 @@
 \graphicspath{{pics/}}
 {% endraw %}
 
-\usetikzlibrary{arrows,shapes, calc}
-
-% For every picture that defines or uses external nodes, you'll have to
-% apply the 'remember picture' style. To avoid some typing, we'll apply
-% the style to all pictures.
-\tikzstyle{every picture}+=[remember picture]
-\tikzstyle{na} = [baseline=-.5ex]
-
-% Neccessary since lmodern fonts declare only small math symbols
-\DeclareFontShape{OMX}{cmex}{m}{n}{
-  <-7.5> cmex7
-  <7.5-8.5> cmex8
-  <8.5-9.5> cmex9
-  <9.5-> cmex10
-}{}
-\SetSymbolFont{largesymbols}{normal}{OMX}{cmex}{m}{n}
-\SetSymbolFont{largesymbols}{bold}{OMX}{cmex}{m}{n}
-
-
-\definecolor{DeepBlue}{RGB}{35,80,120}
-\newcommand{\Losc}{\ensuremath{L^{\text{osc}}}}
-\newcommand{\Lcoh}{\ensuremath{L^{\text{coh}}}}
-\newcommand{\Ld}{\ensuremath{L^{\text{d}}}}
-\newcommand{\Dm}{\ensuremath{\Delta m^2}}
-\newcommand{\Important}{\textcolor{BrickRed}}
-\newcommand{\Regular}{\textcolor{DeepBlue}}
-\newcommand{\DeepBlue}{\textcolor{DeepBlue}}
-\newcommand{\MidnightBlue}{\textcolor{MidnightBlue}}
-\newcommand{\Orange}{\textcolor{Orange}}
-\newcommand{\Maroon}{\textcolor{Maroon}}
-\newcommand{\PineGreen}{\textcolor{PineGreen}}
-\newcommand{\Bittersweet}{\textcolor{Bittersweet}}
-\newcommand{\regitem}{\item[\Regular{$\bullet$}]}
-\newcommand{\impitem}{\item[\Important{$\bullet$}]}
-\newcommand{\midblitem}{\item[\MidnightBlue{$\bullet$}]}
-\newcommand{\orangeitem}{\item[\Orange{$\bullet$}]}
-\newcommand{\pineitem}{\item[\PineGreen{$\bullet$}]}
-\newcommand{\bitteritem}{\item[\Bittersweet{$\bullet$}]}
-\newcommand{\sip}{\ensuremath{\sigma_p}}
-\newcommand{\srel}{\ensuremath{\sigma_{\text{rel}}}}
-\newcommand{\six}{\ensuremath{\sigma_x}}
-\newcommand{\anue}{\ensuremath{\bar{\nu}_e}}
-\newcommand{\enu}{\ensuremath{E_{\nu}}}
-\newcommand{\highlight}{\textcolor{navyblue}}
-
-\newcommand{\sinSqDouble}{\ensuremath{\sin^2 2 \theta_{13} }}
-\newcommand{\dm}{\ensuremath{\Delta m^2_{32}}}
-
-\newcommand{\lihe}{\ensuremath{\nuclide[9]{Li}/\nuclide[8]{He}}}
-\newcommand{\linine}{\ensuremath{\nuclide[9]{Li}}}
-\newcommand{\amc}{\ensuremath{\text{AmC}}}
-\newcommand{\calphao}{\ensuremath{\nuclide[13]{C}(\alpha, n)\nuclide[16]{0}}}
-
-\newcommand{\semitransp}[2][35]{\color{fg!#1}#2}
-\newcommand\arxiv[1]{\href{http://arxiv.org/abs/#1}{[#1]}}
-
-{% raw %}
-\newcommand\ihepdocdb[3][DocDB-]{\href{http://#2.ihep.ac.cn/cgi-bin/DocDB/ShowDocument?docid=#3}{#1#3}}
-\newcommand\dbdocdb[2][DocDB-]{\ihepdocdb[#1]{dayabay}{#2}}
-\newcommand\junodocdb[2][DocDB-]{\ihepdocdb[#1]{juno}{#2}}
-{% endraw %}
-
-\hypersetup{colorlinks=true, urlcolor=PineGreen}
-% \hypersetup{
-    % colorlinks=true,
-    % linkcolor=blue,
-    % filecolor=magenta,
-    % urlcolor=cyan,
-    % pdftitle={Overleaf Example},
-    % pdfpagemode=FullScreen,
-    % }
 
 % information for the title page
 \author{ {{cookiecutter.author}} }
@@ -106,7 +21,9 @@
 \institute{JINR, Dubna}
 \date{\today}
 
+
 \begin{document}
 \subfile{slides/title.tex}
+\subfile{slides/column.tex}
 \subfile{slides/thanks.tex}
 \end{document}

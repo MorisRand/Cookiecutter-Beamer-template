@@ -1,0 +1,37 @@
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+% \usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{subfiles}
+\usepackage{isotope}
+\usepackage{tensor}
+\usepackage{tikz}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{caption}
+\captionsetup{labelformat=empty,labelsep=none}
+\sisetup{math-micro=\text{µ},text-micro=µ}
+
+\hypersetup{colorlinks=true, urlcolor=PineGreen}
+% \hypersetup{
+    % colorlinks=true,
+    % linkcolor=blue,
+    % filecolor=magenta,
+    % urlcolor=cyan,
+    % pdftitle={Overleaf Example},
+    % pdfpagemode=FullScreen,
+    % }
+
+% Neccessary since lmodern fonts declare only small math symbols
+\DeclareFontShape{OMX}{cmex}{m}{n}{
+  <-7.5> cmex7
+  <7.5-8.5> cmex8
+  <8.5-9.5> cmex9
+  <9.5-> cmex10
+}{}
+\SetSymbolFont{largesymbols}{normal}{OMX}{cmex}{m}{n}
+\SetSymbolFont{largesymbols}{bold}{OMX}{cmex}{m}{n}
