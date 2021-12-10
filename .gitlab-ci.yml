@@ -5,4 +5,4 @@ compile_pdf:
     - latexmk
   artifacts:
     paths:
-      - \{\{cookiecutter.directory_name\}\}/talk.pdf
+      - talk.pdf
