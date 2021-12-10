@@ -1,4 +1,5 @@
 compile_pdf:
+  stage: build
   image: aergus/latex
   script:
     - cd \{\{cookiecutter.directory_name\}\}
@@ -7,3 +8,15 @@ compile_pdf:
   artifacts:
     paths:
       - talk.pdf
+
+pages:
+  stage: deploy
+  script:
+    - mkdir public  # create a folder called public
+    - cp talks.pdf public  # copy the pdf file into the public folder
+  artifacts:
+    paths: 
+      - public  # instruct GitLab to keep the public folder
+  only: 
+    - master  # deploy the pdf only for commits made to the master branch 
+
