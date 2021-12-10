@@ -3,6 +3,8 @@ compile_pdf:
   script:
     - cd \{\{cookiecutter.directory_name\}\}
     - latexmk
+    - ls
+    - ls ..
   artifacts:
     paths:
       - talk.pdf
