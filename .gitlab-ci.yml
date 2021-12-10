@@ -7,4 +7,4 @@ compile_pdf:
     - ls ..
   artifacts:
     paths:
-      - {{cookiecutter.directory_name}}/talk.pdf
+      - "{{cookiecutter.directory_name}}/talk.pdf"
