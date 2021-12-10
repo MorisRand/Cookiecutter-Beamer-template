@@ -3,11 +3,11 @@
 
 \mode<presentation>
 
-\DeclareOptionBeamer{background}{\def\beamer@saarland@background{#1}}
+\DeclareOptionBeamer{background}{\def\beamer@morisrand@background{#1}}
 \ExecuteOptionsBeamer{background=} % Default value is empty
-\DeclareOptionBeamer{logo}{\def\beamer@saarland@logo{#1}}
+\DeclareOptionBeamer{logo}{\def\beamer@morisrand@logo{#1}}
 \ExecuteOptionsBeamer{logo=} % Default value is empty
-\DeclareOptionBeamer{secondlogo}{\def\beamer@saarland@secondlogo{#1}}
+\DeclareOptionBeamer{secondlogo}{\def\beamer@morisrand@secondlogo{#1}}
 \ExecuteOptionsBeamer{secondlogo=}
 \ProcessOptionsBeamer
 
@@ -16,16 +16,16 @@
 {%
 	\leavevmode%
 	\hbox{%
-		\if \beamer@saarland@secondlogo\@empty
+		\if \beamer@morisrand@secondlogo\@empty
 		\else
-                \makebox[0pt][l]{\includegraphics[height=1cm]{\beamer@saarland@secondlogo}}
+                \makebox[0pt][l]{\includegraphics[height=1cm]{\beamer@morisrand@secondlogo}}
 		\fi
 		\begin{beamercolorbox}[wd=0.98\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber}%
 			\insertframenumber{}\hspace*{-1ex}
 		\end{beamercolorbox}
-		\if \beamer@saarland@logo\@empty
+		\if \beamer@morisrand@logo\@empty
 		\else
-                \makebox[0pt][r]{\includegraphics[height=1cm]{\beamer@saarland@logo}}
+                \makebox[0pt][r]{\includegraphics[height=1cm]{\beamer@morisrand@logo}}
 		\fi
 	}%
 }
@@ -33,11 +33,11 @@
 % we insert the watermark background from the sidebar
 \setbeamertemplate{sidebar right}
 {
-	\if \beamer@saarland@background\@empty
+	\if \beamer@morisrand@background\@empty
 	\else
 		\vskip.1\beamer@leftmargin%
 		\vfill%
-		\llap{\includegraphics[width=.5\paperwidth,height=.5\paperheight]{\beamer@saarland@background}}
+		\llap{\includegraphics[width=.5\paperwidth,height=.5\paperheight]{\beamer@morisrand@background}}
 	\fi
 }
 
