@@ -8,7 +8,12 @@ pip install cookiecutter
 ```
 
 ## Bootstrap presentation:
-The following command will create a sample Beamer presentation; create git repo; put .latexmkrc, git
+The following command creates:
+-  sample Beamer presentations
+-  git repo
+-  .latexmkrc
+-  git pre-commit-hooks
+-  GitLab CI config for continuous build of slides
 settings and git hooks
 ```
 cookiecutter https://git.jinr.ru/treskov/cookiecutter-beamer
