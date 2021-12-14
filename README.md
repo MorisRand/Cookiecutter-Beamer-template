@@ -24,6 +24,21 @@ settings and git hooks
 cookiecutter https://git.jinr.ru/treskov/cookiecutter-beamer
 ```
 
+## Useful Latexmk commands
+### Build slides
+```bash
+latexmk
+```
+
+### Clean intermediate files
+```bash
+latexmk -c
+```
+
+### Force rebuiding
+```bash
+latexmk -gg
+```
 ## Source of inspiration
 Based on Saarland theme
 https://github.com/kailashbuki/beamerthemesaarland
