@@ -1,8 +1,10 @@
 # Cookiecutter template for Beamer
 [![pipeline status](https://git.jinr.ru/treskov/cookiecutter-beamer/badges/master/pipeline.svg)](https://git.jinr.ru/treskov/cookiecutter-beamer/-/commits/master)
 
-Easy and fast way to bootstrap a Beamer presentation without tedious of style files and other
+Easy and fast way to bootstrap a Beamer presentation without tedious process of copying style files and other
 configuration between presentations with [cookiecutter](https://github.com/cookiecutter/cookiecutter).
+
+> Requires [Lato font](https://fonts.google.com/specimen/Lato#standard-styles)
 
 ## How it looks like
 - [last successfully built PDF](http://treskov.pages.jinr.ru/cookiecutter-beamer/talk.pdf)
