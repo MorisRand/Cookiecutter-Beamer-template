@@ -1,19 +1,14 @@
 # Cookiecutter template for Beamer
-[![pipeline status](https://git.jinr.ru/treskov/cookiecutter-beamer/badges/master/pipeline.svg)](https://git.jinr.ru/treskov/cookiecutter-beamer/-/commits/master)
 
 Easy and fast way to bootstrap a Beamer presentation without tedious process of copying style files and other
-configuration between presentations with [cookiecutter](https://github.com/cookiecutter/cookiecutter).
+configuration between presentations with [cookiecutter](https://github.com/cookiecutter/cookiecutter) themed with [JINR](https://jinr.ru), [DLNP](https://dlnp.jinr.ru/) and [Daya Bay collaboration](http://dayawane.ihep.ac.cn/twiki/bin/view/Public/) logos.
 
 > Requires [Lato font](https://fonts.google.com/specimen/Lato#standard-styles)
-
-## How it looks like
-- [last successfully built PDF](http://treskov.pages.jinr.ru/cookiecutter-beamer/talk.pdf)
 
 ## Install cookiecutter
 ```shell
 pip install cookiecutter
 ```
-
 ## Bootstrap presentation:
 The following command creates:
 -  sample Beamer presentations
@@ -44,5 +39,3 @@ latexmk -gg
 ## Source of inspiration
 Based on Saarland theme
 https://github.com/kailashbuki/beamerthemesaarland
-
-
